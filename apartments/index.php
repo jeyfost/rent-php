@@ -197,7 +197,7 @@ $page = $pagerResult->fetch_assoc();
             echo $apartment['text'];
         ?>
         <br /><br />
-        <b class='blue'>Стоимость: <?= $apartment['price'] ?> руб. в сутки.</b>
+        <b class='blue'>Стоимость: <?php if($apartment['price'] == 0) {echo "договорная";} else {echo $apartment['price'];} ?> руб. в сутки.</b>
         <br /><br />
         <b class='blue'>Возможен наличный и безналичный расчёт.</b>
     </div>
