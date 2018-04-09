@@ -13,16 +13,18 @@
 
 <head>
 
-    <meta charset="windows-1251">
+    <meta charset="utf-8">
     <meta name='description' content='Аренда квартир и автомобилей в Могилёве.'>
     <meta name='keywords' content='аренда квартиры могилёв, квартира, аренда, жилье, квартира могилёв, жильё могилёв, аренда жилья могилёв, квартира по суткам могилёв, квартира по часам могилёв, проживание могилёв, квартира в центре могилёва, жильё в центре могилёва, аренда квартиры в центре могилёва, аренда жилья в центре могилёва, hotel mogilev, apartment mogilev, apartment rent mogilev, rent mogilev, place to stop mogilev, аренда автомобилей, аренда автомобилей могилев, аренда машин, аренда машин могилев, прокат автомобилей могилев, прокат автомобилей, прокат машин, прокат машин могилев, аренда, прокат, car mogilev, car rent mogilev, квартира на сутки могилёв, снять квартиру на сутки могилев, квартира по суткам могилев, снять квартиру на сутки могилёв, квартира на час, могилёв почасовые квартиры, гостиница на час могилев, квартира на ночь могилев, дешевые гостиницы могилев, недорогие гостиницы могилёв, гостиницы цены могилев, гостиницы эконом могилёв, частные гостиницы могилёв, мини гостиницы могилев, номер в гостинице могилев, отель на час могилев, гостиницы эконом класса могилев, мини отели могилев, посуточная аренда квартир могилев, номер на час, посуточно могилёв, квартира в аренду могилев, квартира на сутки могилев, гостиницы города могилева, квартира на ночь в могилеве, гостиница на час, почасовые гостиницы, снять квартиру на час, дешевые гостиницы, квартира на ночь, снять квартиру на сутки, почасовой отель, гостиница на ночь, почасовые квартиры, почасовая аренда квартир'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
     <title>Аренда квартир и автомобилей в Могилёве</title>
 
-    <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-    <script type='text/javascript' src='js/menu.js'></script>
-    <script type='text/javascript' src='js/sliderTrailers.js'></script>
-    <script type='text/javascript' src='js/autoslideTrailers.js'></script>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/menu.js'></script>
+    <script type='text/javascript' src='/js/sliderTrailers.js'></script>
+    <script type='text/javascript' src='/js/autoslideTrailers.js'></script>
 
     <!-- Yandex.Metrika counter -->
     <!--
@@ -62,13 +64,13 @@
 
 <header>
     <div id='headerContent'>
-        <a href='index.html' class='noBorder'>
+        <a href='/' class='noBorder'>
             <div id='logo'>
-                <img src='images/logo.png' id='logoImage' class='noBorder' />
+                <img src='/images/logo.png' id='logoImage' class='noBorder' />
             </div>
         </a>
         <menu>
-            <a href='index.html' class='noBorder'>
+            <a href='/' class='noBorder'>
                 <div id='point1' onmouseover='changePoint("point1Text", 1)' onmouseout='changePoint("point1Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point1Text'>Главная</span>
@@ -76,7 +78,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='appartments.html' class='noBorder'>
+            <a href='/apartments/' class='noBorder'>
                 <div id='point2' onmouseover='changePoint("point2Text", 1)' onmouseout='changePoint("point2Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point2Text'>Квартиры</span>
@@ -84,7 +86,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='cars.html' class='noBorder'>
+            <a href='/cars/' class='noBorder'>
                 <div id='point3' onmouseover='changePoint("point3Text", 1)' onmouseout='changePoint("point3Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point3Text'>Автомобили</span>
@@ -92,7 +94,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='trailers.html'>
+            <a href='/trailers/'>
                 <div id='point4Active'>
                     <div class='pointText'>
                         <span class='menuTextWhite'>Прицепы</span>
@@ -100,7 +102,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='contacts.html'>
+            <a href='/contacts/'>
                 <div id='point5' onmouseover='changePoint("point5Text", 1)' onmouseout='changePoint("point5Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point5Text'>Контакты</span>
@@ -116,25 +118,25 @@
         <div id='sliderContentTrailers'>
             <div id='slideWrapTrailers'>
                 <div class='slideItem'>
-                    <img src='images/trailers/trailer11.jpg' class='noBorder' id='flat1img' />
+                    <img src='/images/trailers/trailer11.jpg' class='noBorder' id='flat1img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/trailers/trailer12.jpg' class='noBorder' id='flat2img' />
+                    <img src='/images/trailers/trailer12.jpg' class='noBorder' id='flat2img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/trailers/trailer13.jpg' class='noBorder' id='flat3img' />
+                    <img src='/images/trailers/trailer13.jpg' class='noBorder' id='flat3img' />
                 </div>
             </div>
             <div id='sliderButtonsBGTrailers'>
                 <div id='slideSwitchContainerTrailers'>
                     <div class='slideSwitch' id='switch1' name='active' style='cursor: default; background-color: #62aab8;'>
-                        <img src='images/trailers/preview/trailer11.jpg' class='noBorder' id='switch1B' />
+                        <img src='/images/trailers/preview/trailer11.jpg' class='noBorder' id='switch1B' />
                     </div>
                     <div class='slideSwitch' id='switch2' name='notActive' style=''>
-                        <img src='images/trailers/preview/trailer12.jpg' class='noBorder' id='switch2B' />
+                        <img src='/images/trailers/preview/trailer12.jpg' class='noBorder' id='switch2B' />
                     </div>
                     <div class='slideSwitch'  id='switch3' name='notActive' style=''>
-                        <img src='images/trailers/preview/trailer13.jpg' class='noBorder' id='switch3B' />
+                        <img src='/images/trailers/preview/trailer13.jpg' class='noBorder' id='switch3B' />
                     </div>
                 </div>
             </div>
@@ -146,7 +148,7 @@
     <div id='greetingsHeader'>
         <span class='headerStyle'>О прицепах</span>
     </div>
-    <center><img src='images/horizontalLine.png' class='noBorder line' /></center>
+    <center><img src='/images/horizontalLine.png' class='noBorder line' /></center>
     <div id='greetingsText' style='font-size: 16px;'>
         <b class='blue'>Прицеп для легкового автомобиля</b>
         <br /><br />
@@ -192,16 +194,16 @@
     </div>
 </div>
 <footer>
-    <img src='images/horizontalLine.png' class='noBorder line' />
+    <img src='/images/horizontalLine.png' class='noBorder line' />
     <div id='leftFooterBlock'>
-        <a href='index.html' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
+        <a href='/' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
         <br/>
         <span class='footerStyle'>+375(29)3303120</span>
     </div>
     <div id='rightFooterBlock'>
         <span class='footerStyle'>Создание сайта</span>
         <br />
-        <a href='http://airlab.by/' class='noBorder'><img src='images/airlab.png' class='noBorder' /></a>
+        <a href='http://airlab.by/' class='noBorder'><img src='/images/airlab.png' class='noBorder' /></a>
     </div>
 </footer>
 

@@ -2,25 +2,25 @@
 
 @font-face {
     font-family: 'AGO';
-    src: url('../fonts/AGOpusHighResolution Roman.eot');
-    src: local('O'), url('../fonts/AGOpusHighResolution Roman.woff') format('woff'), url('../fonts/AGOpusHighResolution Roman.ttf') format('truetype'), url('../fonts/AGOpusHighResolution Roman.svg') format('svg');
+    src: url('/fonts/AGOpusHighResolution Roman.eot');
+    src: local('O'), url('/fonts/AGOpusHighResolution Roman.woff') format('woff'), url('/fonts/AGOpusHighResolution Roman.ttf') format('truetype'), url('/fonts/AGOpusHighResolution Roman.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 body {margin: 0; padding: 0; font-family: AGO, Tahoma, Geneva, sans-serif; font-size: 14px; font-style: normal; font-weight: 100; color: #5f5f5f;}
-header {background: url(../images/head.png) repeat-x; height: 127px;}
+header {background: url(/images/head.png) repeat-x; height: 127px;}
 menu {position: relative; float: right; width: 715px; height: 112px; margin-top: -15px;}
 footer {position: relative; margin: 145px auto 0 auto; width: 1000px; text-align: center;}
 tr, td {border-collapse: collapse; border: 1px solid #8f8f8f;}
 p, li {font-size: 16px;}
 a {text-decoration: none;}
 
-#point1:hover {background: url(../images/activePoint.png);}
-#point2:hover {background: url(../images/activePoint.png);}
-#point3:hover {background: url(../images/activePoint.png);}
-#point4:hover {background: url(../images/activePoint.png);}
-#point5:hover {background: url(../images/activePoint.png);}
+#point1:hover {background: url(/images/activePoint.png);}
+#point2:hover {background: url(/images/activePoint.png);}
+#point3:hover {background: url(/images/activePoint.png);}
+#point4:hover {background: url(/images/activePoint.png);}
+#point5:hover {background: url(/images/activePoint.png);}
 #footerLink:hover {text-decoration: underline;}
 
 .headerStyleTransition:hover {color: #62aab8;}
@@ -28,22 +28,22 @@ a {text-decoration: none;}
 .categoryIMG img:hover {opacity: .7;}
 
 #headerContent {position: relative; margin: 0 auto; width: 1000px; height: 127px;}
-#logo {position: relative; float: left; margin-top: 27px; width: 175px; height: 100px; background: url(../images/blue.png) repeat top left; text-align: center;}
+#logo {position: relative; float: left; margin-top: 27px; width: 175px; height: 100px; background: url(/images/blue.png) repeat top left; text-align: center;}
 #logoImage {margin-top: 15px;}
 #page {position: relative; margin: 20px auto 0 auto; width: 1000px; text-align: center;}
 #pageContacts {position: relative; margin: 20px auto 0 auto; width: 1000px; text-align: left; height: 1100px;}
 #point1, #point2, #point3, #point4, #point5 {position: relative; float: left; width: 135px; height: 112px; text-align: center; margin-left: -8px;}
-#point1Active {position: relative; float: left; width: 135px; height: 112px; background: url(../images/blue.png) repeat top left; margin-left: -8px; text-align: center;}
-#point2Active, #point3Active, #point4Active, #point5Active {position: relative; float: left; width: 135px; height: 112px; background: url(../images/blue.png) repeat top left; text-align: center;}
+#point1Active {position: relative; float: left; width: 135px; height: 112px; background: url(/images/blue.png) repeat top left; margin-left: -8px; text-align: center;}
+#point2Active, #point3Active, #point4Active, #point5Active {position: relative; float: left; width: 135px; height: 112px; background: url(/images/blue.png) repeat top left; text-align: center;}
 #greetingsHeader {width: 1000px; text-align: center;}
 #greetingsText {text-align: left; width: 960px; margin: 10px auto 0 auto;}
 #categoriesBlock {width: 960px; height: 625px; background-color: #f5f5f5; padding: 20px; margin-top: 20px;}
-#categoriesInnerBlock {width: 960px; height: 445px; margin: 0 auto; background-image: url(../images/main.jpg);}
+#categoriesInnerBlock {width: 960px; height: 445px; margin: 0 auto; background-image: url(/images/main.jpg);}
 #leftLink {position: relative; float: left; width: 447px; height: 445px;}
 #centralEmpty {position: relative; float: left; width: 66px; height: 445px;}
 #rightLink {position: relative; float: left; width: 441px; height: 445px;}
-#buttonsBlock {width: 960px; height: 108px; margin-top: 20px; background: url(../images/head.png) repeat top left;}
-#sliderButtonsDivider {position: relative; float: left; width: 2px; height: 87px; background: url(../images/sliderDivider.png); margin-top: 10px;}
+#buttonsBlock {width: 960px; height: 108px; margin-top: 20px; background: url(/images/head.png) repeat top left;}
+#sliderButtonsDivider {position: relative; float: left; width: 2px; height: 87px; background: url(/images/sliderDivider.png); margin-top: 10px;}
 #leftFooterBlock {position: relative; float: left; width: 480px; margin-left: 20px; text-align: left;}
 #rightFooterBlock {position: relative; float: right; width: 476px; margin-right: 20px; text-align: right;}
 #greetingsBlockInner {width: 1000px; margin: 20px auto 0 auto;}
@@ -54,9 +54,9 @@ a {text-decoration: none;}
 #slider {width: 960px; height: 573px; background-color: #f5f5f5; padding: 20px; margin-top: 20px; overflow: hidden;}
 #sliderCars, #sliderTrailers {width: 960px; height: 445px; background-color: #f5f5f5; padding: 20px; margin-top: 20px; overflow: hidden;}
 #sliderContent, #sliderContentTrailers {width: 960px; height: 445px; overflow: hidden; margin: 0 auto;}
-#sliderButtonsBG {position: absolute; bottom: 148px; left: 353px; width: 250px; height: 25px; background-image: url(../images/sliderButtonsBG.png); overflow: hidden; padding: 5px;}
-#sliderButtonsBGCars {position: absolute; width: 556px; bottom: 20px; left: 260px; height: 25px; padding: 5px 5px; background-image: url(../images/sliderButtonsBG4.png); overflow: hidden;}
-#sliderButtonsBGTrailers {position: absolute; width: 158px; bottom: 20px; left: 420px; height: 25px; padding: 5px 5px; background-image: url(../images/sliderButtonsBG4.png); overflow: hidden;}
+#sliderButtonsBG {position: absolute; bottom: 148px; left: 353px; width: 250px; height: 25px; background-image: url(/images/sliderButtonsBG.png); overflow: hidden; padding: 5px;}
+#sliderButtonsBGCars {position: absolute; width: 556px; bottom: 20px; left: 260px; height: 25px; padding: 5px 5px; background-image: url(/images/sliderButtonsBG4.png); overflow: hidden;}
+#sliderButtonsBGTrailers {position: absolute; width: 158px; bottom: 20px; left: 420px; height: 25px; padding: 5px 5px; background-image: url(/images/sliderButtonsBG4.png); overflow: hidden;}
 #slideSwitchContainer {width: 581px; height: 25px; margin-left: -5px; margin-top: -1px;}
 #slideSwitchContainerTrailsers {width: 183px; height: 25px; margin-left: -5px;}
 #categoriesDescription {width: 960px; padding-bottom: 10px;}

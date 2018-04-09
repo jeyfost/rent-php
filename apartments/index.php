@@ -13,18 +13,20 @@
 
 <head>
 
-    <meta charset="windows-1251">
+    <meta charset="utf-8">
     <meta name='description' content='Аренда квартир и автомобилей в Могилёве.'>
     <meta name='keywords' content='квартира на сутки могилёв, снять квартиру на сутки могилев, квартира по суткам могилев, снять квартиру на сутки могилёв, квартира на час, могилёв почасовые квартиры, гостиница на час могилев, квартира на ночь могилев, дешевые гостиницы могилев, недорогие гостиницы могилёв, гостиницы цены могилев, гостиницы эконом могилёв, частные гостиницы могилёв, мини гостиницы могилев, номер в гостинице могилев, отель на час могилев, гостиницы эконом класса могилев, мини отели могилев, посуточная аренда квартир могилев, номер на час, посуточно могилёв, квартира в аренду могилев, квартира на сутки могилев, гостиницы города могилева, квартира на ночь в могилеве, гостиница на час, почасовые гостиницы, снять квартиру на час, дешевые гостиницы, квартира на ночь, снять квартиру на сутки, почасовой отель, гостиница на ночь, почасовые квартиры, почасовая аренда квартир'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
     <title>Аренда квартир в Могилёве</title>
 
-    <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-    <script type='text/javascript' src='js/menu.js'></script>
-    <script type='text/javascript' src='js/slider.js'></script>
-    <script type='text/javascript' src='js/sliderButtons.js'></script>
-    <script type='text/javascript' src='js/photosChange.js'></script>
-    <script type='text/javascript' src='js/preload.js'></script>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/menu.js'></script>
+    <script type='text/javascript' src='/js/slider.js'></script>
+    <script type='text/javascript' src='/js/sliderButtons.js'></script>
+    <script type='text/javascript' src='/js/photosChange.js'></script>
+    <script type='text/javascript' src='/js/preload.js'></script>
 
     <!-- Yandex.Metrika counter -->
     <!--
@@ -63,13 +65,13 @@
 <body>
 <header>
     <div id='headerContent'>
-        <a href='index.html' class='noBorder'>
+        <a href='/' class='noBorder'>
             <div id='logo'>
-                <img src='images/logo.png' id='logoImage' class='noBorder' />
+                <img src='/images/logo.png' id='logoImage' class='noBorder' />
             </div>
         </a>
         <menu>
-            <a href='index.html' class='noBorder'>
+            <a href='/' class='noBorder'>
                 <div id='point1' onmouseover='changePoint("point1Text", 1)' onmouseout='changePoint("point1Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point1Text'>Главная</span>
@@ -77,7 +79,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='appartments.html' class='noBorder'>
+            <a href='/apartments/' class='noBorder'>
                 <div id='point2Active'>
                     <div class='pointText'>
                         <span class='menuTextWhite'>Квартиры</span>
@@ -85,7 +87,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='cars.html' class='noBorder'>
+            <a href='/cars/' class='noBorder'>
                 <div id='point3' onmouseover='changePoint("point3Text", 1)' onmouseout='changePoint("point3Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point3Text'>Автомобили</span>
@@ -93,7 +95,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='trailers.html'>
+            <a href='/trailers/'>
                 <div id='point4' onmouseover='changePoint("point4Text", 1)' onmouseout='changePoint("point4Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point4Text'>Прицепы</span>
@@ -101,7 +103,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='contacts.html'>
+            <a href='/contacts/'>
                 <div id='point5' onmouseover='changePoint("point5Text", 1)' onmouseout='changePoint("point5Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point5Text'>Контакты</span>
@@ -116,37 +118,37 @@
         <div id='sliderContent'>
             <div id='slideWrap'>
                 <div class='slideItem'>
-                    <img src='images/appartments/flat11.jpg' class='noBorder' id='flat1img' />
+                    <img src='/images/apartments/flat11.jpg' class='noBorder' id='flat1img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/appartments/flat12.jpg' class='noBorder' id='flat2img' />
+                    <img src='/images/apartments/flat12.jpg' class='noBorder' id='flat2img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/appartments/flat13.jpg' class='noBorder' id='flat3img' />
+                    <img src='/images/apartments/flat13.jpg' class='noBorder' id='flat3img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/appartments/flat14.jpg' class='noBorder' id='flat4img' />
+                    <img src='/images/apartments/flat14.jpg' class='noBorder' id='flat4img' />
                 </div>
                 <div class='slideItem'>
-                    <img src='images/appartments/flat15.jpg' class='noBorder' id='flat5img' />
+                    <img src='/images/apartments/flat15.jpg' class='noBorder' id='flat5img' />
                 </div>
             </div>
             <div id='sliderButtonsBG' style='bottom: 25px;'>
                 <div id='slideSwitchContainer'>
                     <div class='slideSwitch' id='switch1' name='active' style='cursor: default; background-color: #62aab8;'>
-                        <img src='images/appartments/preview/flat11.jpg' class='noBorder' id='switch1B' />
+                        <img src='/images/apartments/preview/flat11.jpg' class='noBorder' id='switch1B' />
                     </div>
                     <div class='slideSwitch' id='switch2' name='notActive' style=''>
-                        <img src='images/appartments/preview/flat12.jpg' class='noBorder' id='switch2B' />
+                        <img src='/images/apartments/preview/flat12.jpg' class='noBorder' id='switch2B' />
                     </div>
                     <div class='slideSwitch'  id='switch3' name='notActive' style=''>
-                        <img src='images/appartments/preview/flat13.jpg' class='noBorder' id='switch3B' />
+                        <img src='/images/apartments/preview/flat13.jpg' class='noBorder' id='switch3B' />
                     </div>
                     <div class='slideSwitch'  id='switch4' name='notActive' style=''>
-                        <img src='images/appartments/preview/flat14.jpg' class='noBorder' id='switch4B' />
+                        <img src='/images/apartments/preview/flat14.jpg' class='noBorder' id='switch4B' />
                     </div>
                     <div class='slideSwitch'  id='switch5' name='notActive' style=''>
-                        <img src='images/appartments/preview/flat15.jpg' class='noBorder' id='switch5B' />
+                        <img src='/images/apartments/preview/flat15.jpg' class='noBorder' id='switch5B' />
                     </div>
                 </div>
             </div>
@@ -180,7 +182,7 @@
     <div id='greetingsHeader'>
         <span class='headerStyle'>О квартире</span>
     </div>
-    <center><img src='images/horizontalLine.png' class='noBorder line' /></center>
+    <center><img src='/images/horizontalLine.png' class='noBorder line' /></center>
     <div id='greetingsText'>
         Однокомнатная уютная квартира расположена в центре Могилёва на берегу реки Дубровенка по адресу ул. Бурденко, 12 в 10-ти этажном кирпичном доме на 7-м этаже.
         <br /><br />
@@ -225,16 +227,16 @@
     </div>
 </div>
 <footer>
-    <img src='images/horizontalLine.png' class='noBorder line' />
+    <img src='/images/horizontalLine.png' class='noBorder line' />
     <div id='leftFooterBlock'>
-        <a href='index.html' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
+        <a href='/' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
         <br/>
         <span class='footerStyle'>+375(29)3303120</span>
     </div>
     <div id='rightFooterBlock'>
         <span class='footerStyle'>Создание сайта</span>
         <br />
-        <a href='http://airlab.by/' class='noBorder'><img src='images/airlab.png' class='noBorder' /></a>
+        <a href='https://airlab.by/' class='noBorder'><img src='/images/airlab.png' class='noBorder' /></a>
     </div>
 </footer>
 </body>

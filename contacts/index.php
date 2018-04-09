@@ -13,14 +13,16 @@
 
 <head>
 
-    <meta charset="windows-1251">
+    <meta charset="utf-8">
     <meta name='description' content='Аренда квартир и автомобилей в Могилёве.'>
     <meta name='keywords' content='аренда квартиры могилёв, квартира, аренда, жилье, квартира могилёв, жильё могилёв, аренда жилья могилёв, квартира по суткам могилёв, квартира по часам могилёв, проживание могилёв, квартира в центре могилёва, жильё в центре могилёва, аренда квартиры в центре могилёва, аренда жилья в центре могилёва, hotel mogilev, apartment mogilev, apartment rent mogilev, rent mogilev, place to stop mogilev, аренда автомобилей, аренда автомобилей могилев, аренда машин, аренда машин могилев, прокат автомобилей могилев, прокат автомобилей, прокат машин, прокат машин могилев, аренда, прокат, car mogilev, car rent mogilev'>
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
     <title>Аренда автомобилей в Могилёве</title>
 
-    <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-    <script type='text/javascript' src='js/menu.js'></script>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/menu.js'></script>
 
     <!-- Yandex.Metrika counter -->
     <!--
@@ -59,13 +61,13 @@
 <body onload='pageResize()'>
 <header>
     <div id='headerContent'>
-        <a href='index.html' class='noBorder'>
+        <a href='/' class='noBorder'>
             <div id='logo'>
-                <img src='images/logo.png' id='logoImage' class='noBorder' />
+                <img src='/images/logo.png' id='logoImage' class='noBorder' />
             </div>
         </a>
         <menu>
-            <a href='index.html' class='noBorder'>
+            <a href='/' class='noBorder'>
                 <div id='point1' onmouseover='changePoint("point1Text", 1)' onmouseout='changePoint("point1Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point1Text'>Главная</span>
@@ -73,7 +75,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='appartments.html' class='noBorder'>
+            <a href='/apartments/' class='noBorder'>
                 <div id='point2' onmouseover='changePoint("point2Text", 1)' onmouseout='changePoint("point2Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point2Text'>Квартиры</span>
@@ -81,7 +83,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='cars.html' class='noBorder'>
+            <a href='/cars/' class='noBorder'>
                 <div id='point3' onmouseover='changePoint("point3Text", 1)' onmouseout='changePoint("point3Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point3Text'>Автомобили</span>
@@ -89,7 +91,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='trailers.html'>
+            <a href='/trailers/'>
                 <div id='point4' onmouseover='changePoint("point4Text", 1)' onmouseout='changePoint("point4Text", 0)'>
                     <div class='pointText'>
                         <span class='menuTextGrey' id='point4Text'>Прицепы</span>
@@ -97,7 +99,7 @@
                 </div>
             </a>
             <div class='space'></div>
-            <a href='contacts.html'>
+            <a href='/contacts/'>
                 <div id='point5Active'>
                     <div class='pointText'>
                         <span class='menuTextWhite'>Контакты</span>
@@ -111,7 +113,7 @@
 <div id='pageContacts'>
     <center>
         <span class='headerStyle'>Контакты</span>
-        <img src='images/horizontalLine.png' class='noBorder' />
+        <img src='/images/horizontalLine.png' class='noBorder' />
     </center>
     <br />
     <div style='margin-left: 20px;'>
@@ -136,16 +138,16 @@
 </div>
 
 <footer>
-    <img src='images/horizontalLine.png' class='noBorder' />
+    <img src='/images/horizontalLine.png' class='noBorder' />
     <div id='leftFooterBlock'>
-        <a href='index.html' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
+        <a href='/' class='noBorder'><span class='footerStyle' id='footerLink'>rent.mogilev.by</span></a><span class='footerStyle'> &copy; 2016</span>
         <br/>
         <span class='footerStyle'>+375(29)3303120</span>
     </div>
     <div id='rightFooterBlock'>
         <span class='footerStyle'>Создание сайта</span>
         <br />
-        <a href='http://airlab.by/' class='noBorder'><img src='images/airlab.png' class='noBorder' /></a>
+        <a href='http://airlab.by/' class='noBorder'><img src='/images/airlab.png' class='noBorder' /></a>
     </div>
 </footer>
 
