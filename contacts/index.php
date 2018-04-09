@@ -5,6 +5,12 @@
  * Date: 06.04.2018
  * Time: 11:27
  */
+
+include("../scripts/connect.php");
+
+$pagerResult = $mysqli->query("SELECT * FROM rent_pages WHERE url = 'contacts'");
+$page = $pagerResult->fetch_assoc();
+
 ?>
 
 <!doctype html>
@@ -14,10 +20,10 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name='description' content='Аренда квартир и автомобилей в Могилёве.'>
-    <meta name='keywords' content='аренда квартиры могилёв, квартира, аренда, жилье, квартира могилёв, жильё могилёв, аренда жилья могилёв, квартира по суткам могилёв, квартира по часам могилёв, проживание могилёв, квартира в центре могилёва, жильё в центре могилёва, аренда квартиры в центре могилёва, аренда жилья в центре могилёва, hotel mogilev, apartment mogilev, apartment rent mogilev, rent mogilev, place to stop mogilev, аренда автомобилей, аренда автомобилей могилев, аренда машин, аренда машин могилев, прокат автомобилей могилев, прокат автомобилей, прокат машин, прокат машин могилев, аренда, прокат, car mogilev, car rent mogilev'>
+    <meta name='description' content='<?= $page['description'] ?>'>
+    <meta name='keywords' content='<?= $page['keywords'] ?>'>
 
-    <title>Аренда автомобилей в Могилёве</title>
+    <title><?= $page['title'] ?></title>
 
     <link rel='stylesheet' type='text/css' href='/css/main.css'>
 
