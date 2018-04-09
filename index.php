@@ -124,9 +124,12 @@ $page = $pagerResult->fetch_assoc();
         <br />
         <img src='/images/horizontalLine.png' class='noBorder line' />
         <div id='greetingsText' style='text-align: center;'>
-            <span style='font-size: 17px;'>Апартаменты и автомобили «У ПАЛЫЧА» — прекрасный выбор для гостей города Могилева! Мы работаем для Вас и нам важен Ваш комфорт и наша репутация! ПАЛЫЧ всегда рад Вам!</span>
-            <br /><br />
-            <span style='font-size: 17px;'>Все фотографиии и описание апартаментов и автомобилей «У ПАЛЫЧА» соответствуют действительности.</span>
+            <?php
+                $textResult = $mysqli->query("SELECT text FROM rent_text WHERE id = '1'");
+                $text = $textResult->fetch_array(MYSQLI_NUM);
+
+                echo $text[0];
+            ?>
         </div>
         <img src='/images/horizontalLine.png' class='noBorder line' />
         <br />
@@ -134,7 +137,7 @@ $page = $pagerResult->fetch_assoc();
     <div id='categoriesBlock'>
         <div class="categoryBlock">
             <div class="categoryHeader">
-                <a href="/appartments/"><span class="headerStyleTransition" style="font-size: 18px;" id="flatFont" onmouseover="categoryHover('flat', 'flatFont', 1)" onmouseout="categoryHover('flat', 'flatFont', 0)">Аренда квартир на сутки</span></a>
+                <a href="/apartments/"><span class="headerStyleTransition" style="font-size: 18px;" id="flatFont" onmouseover="categoryHover('flat', 'flatFont', 1)" onmouseout="categoryHover('flat', 'flatFont', 0)">Аренда квартир на сутки</span></a>
             </div>
             <br />
             <div class="categoryIMG">
