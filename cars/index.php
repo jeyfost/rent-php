@@ -121,75 +121,37 @@ $page = $pagerResult->fetch_assoc();
     <div id='sliderCars'>
         <div id='sliderContent'>
             <div id='slideWrap'>
-                <div class='slideItem'>
-                    <img src='/images/cars/car11.jpg' class='noBorder' id='flat1img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car12.jpg' class='noBorder' id='flat2img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car13.jpg' class='noBorder' id='flat3img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car14.jpg' class='noBorder' id='flat4img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car15.jpg' class='noBorder' id='flat5img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car16.jpg' class='noBorder' id='flat6img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car17.jpg' class='noBorder' id='flat7img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car18.jpg' class='noBorder' id='flat8img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car19.jpg' class='noBorder' id='flat9img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car20.jpg' class='noBorder' id='flat10img' />
-                </div>
-                <div class='slideItem'>
-                    <img src='/images/cars/car21.jpg' class='noBorder' id='flat11img' />
-                </div>
+                <?php
+                    $j = 0;
+
+                    $photoResult = $mysqli->query("SELECT * FROM rent_cars_photos");
+                    while($photo = $photoResult->fetch_assoc()) {
+                        $j++;
+
+                        echo "
+                            <div class='slideItem'>
+                                <img src='/images/cars/".$photo['big']."' class='noBorder' id='flat".$j."img' />
+                            </div>
+                        ";
+                    }
+                ?>
             </div>
             <div id='sliderButtonsBGCars'>
                 <div id='slideSwitchContainer'>
-                    <div class='slideSwitch' id='switch1' name='active' style='cursor: default; background-color: #62aab8;'>
-                        <img src='/images/cars/preview/car11.jpg' class='noBorder' id='switch1B' />
-                    </div>
-                    <div class='slideSwitch' id='switch2' name='notActive' style=''>
-                        <img src='/images/cars/preview/car12.jpg' class='noBorder' id='switch2B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch3' name='notActive' style=''>
-                        <img src='/images/cars/preview/car13.jpg' class='noBorder' id='switch3B' />
-                    </div>
-                    <div class='slideSwitch' id='switch4' name='notActive' style=''>
-                        <img src='/images/cars/preview/car14.jpg' class='noBorder' id='switch4B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch5' name='notActive' style=''>
-                        <img src='/images/cars/preview/car15.jpg' class='noBorder' id='switch5B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch6' name='notActive' style=''>
-                        <img src='/images/cars/preview/car16.jpg' class='noBorder' id='switch6B' />
-                    </div>
-                    <div class='slideSwitch' id='switch7' name='notActive' style=''>
-                        <img src='/images/cars/preview/car17.jpg' class='noBorder' id='switch7B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch8' name='notActive' style=''>
-                        <img src='/images/cars/preview/car18.jpg' class='noBorder' id='switch8B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch9' name='notActive' style=''>
-                        <img src='/images/cars/preview/car19.jpg' class='noBorder' id='switch9B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch10' name='notActive' style=''>
-                        <img src='/images/cars/preview/car20.jpg' class='noBorder' id='switch10B' />
-                    </div>
-                    <div class='slideSwitch'  id='switch11' name='notActive' style=''>
-                        <img src='/images/cars/preview/car21.jpg' class='noBorder' id='switch11B' />
-                    </div>
+                    <?php
+                        $j = 0;
+
+                        $photoResult = $mysqli->query("SELECT * FROM rent_cars_photos");
+                        while($photo = $photoResult->fetch_assoc()) {
+                            $j++;
+
+                            echo "
+                                <div class='slideSwitch' id='switch".$j."' "; if($j == 1) {echo "name='active' style='cursor: default; background-color: #62aab8;'";} else {echo "name='notActive' style=''";} echo ">
+                                    <img src='/images/cars/preview/".$photo['small']."' class='noBorder' id='switch".$j."B' />
+                                </div>
+                            ";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
