@@ -205,380 +205,155 @@ $page = $pagerResult->fetch_assoc();
         <div style="width: 49.5%; float: left;">
             <div class="carsHeader menuTextGrey">Легковые автомобили</div>
             <br /><br />
-            <div class='carContainer borderRight'>
-                <center><b class='blue'>Volkswagen Polo</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2014-2017
-                <br />
-                <b>Тип двигателя</b>: бензин
-                <br />
-                <b>Расход топлива</b>: от 5 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: АКПП
-                <br />
-                <b>Тип кузова</b>: седан
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>60</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class='carContainer'>
-                <center><b class='blue'>Skoda Octavia A4 Combi</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2002 - 2006
-                <br />
-                <b>Тип двигателя</b>: дизель
-                <br />
-                <b>Расход топлива</b>: от 4 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП, АКПП
-                <br />
-                <b>Тип кузова</b>: универсал
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>40</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <br /><br /><br />
-            <div class='carContainer borderRight'>
-                <center><b class='blue'>Citroen C4 Sedan</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2014-2016
-                <br />
-                <b>Тип двигателя</b>: бензин
-                <br />
-                <b>Расход топлива</b>: от 5 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП
-                <br />
-                <b>Тип кузова</b>: седан
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>60</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class='carContainer'>
-                <center><b class='blue'>Citroen C5 Exclusive</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2003
-                <br />
-                <b>Тип двигателя</b>: дизель
-                <br />
-                <b>Расход топлива</b>: от 4 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП
-                <br />
-                <b>Тип кузова</b>: хетчбек
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>40</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <br /><br /><br />
-            <div class='carContainer borderRight'>
-                <center><b class='blue'>Citroen Berlingo Multispace</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2004
-                <br />
-                <b>Тип двигателя</b>: дизель
-                <br />
-                <b>Расход топлива</b>: от 4 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП
-                <br />
-                <b>Тип кузова</b>: минивэн
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>40</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class='carContainer'>
-                <center><b class='blue'>Volkswagen Passat B5</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 2000
-                <br />
-                <b>Тип двигателя</b>: дизель
-                <br />
-                <b>Расход топлива</b>: от 4 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП
-                <br />
-                <b>Тип кузова</b>: седан
-                <br /><br>
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>10*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>55</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>50</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>45</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>40</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды:<br /><span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <?php
+                $i = 0;
+
+                $carResult = $mysqli->query("SELECT * FROM rent_cars WHERE car_type = '1' ORDER BY id DESC");
+                while($car = $carResult->fetch_assoc()) {
+                    $i++;
+
+                    echo "
+                        <div class='carContainer"; if($i % 2 != 0) {echo " borderRight";} echo "'>
+                            <center><b class='blue'>".$car['name']."</b></center>
+                            <br /><br />
+                            <b>Год выпуска</b>: ".$car['year']."
+                            <br />
+                            <b>Тип двигателя</b>: ".$car['engine']."
+                            <br />
+                            <b>Расход топлива</b>: ".$car['consumption']."
+                            <br />
+                            <b>Коробка передач</b>: ".$car['transmission']."
+                            <br />
+                            <b>Тип кузова</b>: ".$car['body'];
+
+                        if($car['places'] != "0") {
+                            echo "<b>Тип кузова</b>: ".$car['places'];
+                        }
+
+                        if(!empty($car['description'])) {
+                            echo "<br />><br />".$car['description'];
+                        }
+
+                        echo "
+                            <br /><br>
+                            <center><b>Стоимость:</b></center>
+                            <table class='carTable'>
+                                <thead>
+                                <tr>
+                                    <td class='colorCell'>Кол-во суток</td>
+                                    <td class='colorCell'>Цена, руб.</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1 час</td>
+                                    <td class='blue'>".$car['1_hour']."</td>
+                                </tr>
+                                <tr>
+                                    <td>1 сутки</td>
+                                    <td class='blue'>".$car['1_day']."</td>
+                                </tr>
+                                <tr>
+                                    <td>2 суток</td>
+                                    <td class='blue'>".$car['2_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>3-10 суток</td>
+                                    <td class='blue'>".$car['3_10_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>10-20 суток</td>
+                                    <td class='blue'>".$car['10_20_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>20-30 суток</td>
+                                    <td class='blue'>".$car['20_30_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td colspan='2'><b>* Минимальный срок аренды:<br /><span class='blue'>".$car['min_term']."</span></b></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    ";
+
+                        if($i % 2 == 0) {
+                            echo "<br /><br /><br />";
+                        }
+                }
+            ?>
         </div>
         <div style="width: 49.5%; float: right;" class="borderLeft">
             <div class="carsHeader menuTextGrey">Микроавтобусы</div>
             <br /><br />
-            <div class='carContainer' style="width: 100%;">
-                <center><b class='blue'>Volkswagen T4 Multivan Еврован</b></center>
-                <br /><br />
-                <b>Год выпуска</b>: 1999
-                <br />
-                <b>Тип двигателя</b>: дизель
-                <br />
-                <b>Расход топлива</b>: от 6 л. на 100 км
-                <br />
-                <b>Коробка передач</b>: МКПП
-                <br />
-                <b>Тип кузова</b>: автобус легковой категория &laquo;В&raquo;
-                <br />
-                <b>Количество мест:</b> 7 (3+1+1+1+1)
-                <br /><br />
-                Возможно использование для отдыха на природе и  в длительных поездках в качестве автодома (задний диван за 1 минуту трансформируется в большую кровать, на втором ярусе организовываются спальные места для 2-х детей)
-                <br /><br />
-                <center><b>Стоимость:</b></center>
-                <table class='carTable'>
-                    <thead>
-                    <tr>
-                        <td class="colorCell">Кол-во суток</td>
-                        <td class="colorCell">Цена, руб.</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1 час</td>
-                        <td class='blue'>15*</td>
-                    </tr>
-                    <tr>
-                        <td>1 сутки</td>
-                        <td class='blue'>80</td>
-                    </tr>
-                    <tr>
-                        <td>2 суток</td>
-                        <td class='blue'>75</td>
-                    </tr>
-                    <tr>
-                        <td>3-10 суток</td>
-                        <td class='blue'>70</td>
-                    </tr>
-                    <tr>
-                        <td>10-20 суток</td>
-                        <td class='blue'>60</td>
-                    </tr>
-                    <tr>
-                        <td>20-30 суток</td>
-                        <td class='blue'>договорная</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><b>* Минимальный срок аренды: <span class="blue">2 часа</span></b></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <?php
+                $carResult = $mysqli->query("SELECT * FROM rent_cars WHERE car_type = '2' ORDER BY id DESC");
+                while($car = $carResult->fetch_assoc()) {
+                    echo "
+                        <div class='carContainer' style='width: 100%;'>
+                            <center><b class='blue'>".$car['name']."</b></center>
+                            <br /><br />
+                            <b>Год выпуска</b>: ".$car['year']."
+                            <br />
+                            <b>Тип двигателя</b>: ".$car['engine']."
+                            <br />
+                            <b>Расход топлива</b>: ".$car['consumption']."
+                            <br />
+                            <b>Коробка передач</b>: ".$car['transmission']."
+                            <br />
+                            <b>Тип кузова</b>: ".$car['body']."
+                            <br />
+                            <b>Количество мест:</b> ".$car['places']."
+                    ";
+
+                    if(!empty($car['description'])) {
+                        echo "<br /><br />".$car['description'];
+                    }
+
+                    echo "
+                            <br /><br />
+                            <center><b>Стоимость:</b></center>
+                            <table class='carTable'>
+                                <thead>
+                                <tr>
+                                    <td class='colorCell'>Кол-во суток</td>
+                                    <td class='colorCell'>Цена, руб.</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1 час</td>
+                                    <td class='blue'>".$car['1_hour']."</td>
+                                </tr>
+                                <tr>
+                                    <td>1 сутки</td>
+                                    <td class='blue'>".$car['1_day']."</td>
+                                </tr>
+                                <tr>
+                                    <td>2 суток</td>
+                                    <td class='blue'>".$car['2_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>3-10 суток</td>
+                                    <td class='blue'>".$car['3_10_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>10-20 суток</td>
+                                    <td class='blue'>".$car['10_20_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td>20-30 суток</td>
+                                    <td class='blue'>".$car['20_30_days']."</td>
+                                </tr>
+                                <tr>
+                                    <td colspan='2'><b>* Минимальный срок аренды: <span class='blue'>".$car['min_term']."</span></b></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    ";
+                }
+            ?>
             <br /><br />
             <div class='carContainer' style="width: 100%;">
                 <center><b class='blue'>Mercedes-Benz Sprinter 212</b></center>
