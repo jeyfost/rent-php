@@ -93,6 +93,11 @@ if($_SESSION['userID'] != 1) {
             <i class="fa fa-truck" aria-hidden="true"></i><span> Прицепы</span>
         </div>
     </a>
+    <a href="/admin/security/">
+        <div class="menuPoint">
+            <i class="fa fa-shield" aria-hidden="true"></i><span> Безопасность</span>
+        </div>
+    </a>
 </div>
 
 <div id="content">
