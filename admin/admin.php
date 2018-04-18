@@ -78,6 +78,11 @@ if($_SESSION['userID'] != 1) {
             <i class="fa fa-file-text-o" aria-hidden="true"></i><span> Страницы</span>
         </div>
     </a>
+    <a href="/admin/text/">
+        <div class="menuPoint">
+            <i class="fa fa-text-width" aria-hidden="true"></i><span> Текст</span>
+        </div>
+    </a>
     <a href="/admin/apartments/">
         <div class="menuPoint">
             <i class="fa fa-building-o" aria-hidden="true"></i><span> Квартиры</span>
