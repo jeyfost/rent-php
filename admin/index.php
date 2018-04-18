@@ -48,7 +48,7 @@ if($_SESSION['userID'] == 1) {
 
     <script type="text/javascript">
         $(window).on('load', function () {
-            var $preloader = $('#page-preloader'), $spinner = $preloader.find('.spinner');
+            const $preloader = $('#page-preloader'), $spinner = $preloader.find('.spinner');
             $spinner.delay(500).fadeOut();
             $preloader.delay(850).fadeOut();
         });
