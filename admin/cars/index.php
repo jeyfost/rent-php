@@ -92,6 +92,11 @@ if(!empty($_REQUEST['id'])) {
             <i class="fa fa-car" aria-hidden="true"></i><span> Автомобили</span>
         </div>
     </a>
+    <a href="/admin/cars-photos/">
+        <div class="menuPoint">
+            <i class="fa fa-camera" aria-hidden="true"></i><span> Фото автомобилей</span>
+        </div>
+    </a>
     <a href="/admin/trailers/">
         <div class="menuPoint">
             <i class="fa fa-truck" aria-hidden="true"></i><span> Прицепы</span>
