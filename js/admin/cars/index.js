@@ -153,7 +153,7 @@ function deleteCar() {
                                 $.notify(name + " успешно удалён.", "success");
 
                                 setTimeout(function () {
-                                    window.location = "/admin/cars/";
+                                    window.location.href = "/admin/cars/";
                                 }, 3000);
                                 break;
                             case "failed":

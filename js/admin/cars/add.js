@@ -69,6 +69,10 @@ function addCar() {
                                                                 switch(response) {
                                                                     case "ok":
                                                                         $.notify("Автомобиль успешно добавлен.", "success");
+
+                                                                        setTimeout(function () {
+                                                                            window.location.href = "/admin/cars/";
+                                                                        }, 3000);
                                                                         break;
                                                                     case "failed":
                                                                         $.notify("Во время добавления автомобиля произошла ошибка. Попробуйте снова.", "error");
