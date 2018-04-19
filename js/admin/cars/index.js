@@ -130,3 +130,42 @@ function editCar() {
         $.notify("Вы не ввели название.", "error");
     }
 }
+
+function deleteCar() {
+    const id = $('#carSelect').val();
+
+    $.ajax({
+        type: "POST",
+        data: {"id": id},
+        url: "/scripts/admin/cars/ajaxCarName.php",
+        success: function (name) {
+            if(confirm("Вы действительно хотите удалить " + name + "?")) {
+                $.ajax({
+                    type: "POST",
+                    data: {"id": id},
+                    url: "/scripts/admin/ajaxDeleteCar.php",
+                    beforeSend: function () {
+                        $.notify(name + " удаляется...", "info");
+                    },
+                    success: function (response) {
+                        switch (response) {
+                            case "ok":
+                                $.notify(name + " успешно удалён.", "success");
+
+                                setTimeout(function () {
+                                    window.location = "/admin/cars/";
+                                }, 3000);
+                                break;
+                            case "failed":
+                                $.notify("Во время удаления автомобиля произошла ошибка. Попробуйте снова.", "error");
+                                break;
+                            default:
+                                $.notify(response, "warn");
+                                break;
+                        }
+                    }
+                });
+            }
+        }
+    });
+}
