@@ -9,6 +9,15 @@
 session_start();
 include("../../scripts/connect.php");
 
+if(!empty($_REQUEST['id'])) {
+    $carCheckResult = $mysqli->query("SELECT COUNT(id) FROM rent_cars WHERE id = '".$mysqli->real_escape_string($_REQUEST['id'])."'");
+    $carCheck = $carCheckResult->fetch_array(MYSQLI_NUM);
+
+    if($carCheck[0] == 0) {
+        header("Location: /admin/cars/");
+    }
+}
+
 ?>
 
 <html>
@@ -17,7 +26,7 @@ include("../../scripts/connect.php");
 
     <meta charset="utf-8" />
 
-    <title>Панель администрирования | Безопасность</title>
+    <title>Панель администрирования | Автомобили</title>
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -96,11 +105,11 @@ include("../../scripts/connect.php");
 </div>
 
 <div id="content">
-    <span class="headerFont">Редактирпование автомобилей</span>
+    <span class="headerFont">Редактирование автомобилей</span>
     <br /><br />
     <form method="post" id="carsForm">
         <label for="carSelect"></label>
-        <select id="carSelect" name="car" onchange="window.location = '?id=' + this.options[this.selectedIndex].value">
+        <select id="carSelect" onchange="window.location = '?id=' + this.options[this.selectedIndex].value">
             <option value="">- Выберите автомобиль -</option>
             <?php
                 $carResult = $mysqli->query("SELECT * FROM rent_cars ORDER BY name");
@@ -129,7 +138,7 @@ include("../../scripts/connect.php");
                     <br /><br />
                     <label for='typeSelect'>Тип автомобиля:</label>
                     <br />
-                    <select id='typeSelect' name='type' onchange='carTypeSelect(\"".$car['id']."\")'>
+                    <select id='typeSelect' onchange='carTypeSelect(\"".$car['id']."\")'>
                 ";
 
                 $carTypeResult = $mysqli->query("SELECT * FROM rent_cars_types");
@@ -142,19 +151,19 @@ include("../../scripts/connect.php");
                     <br /><br />
                     <label for='nameInput'>Название автомобиля:</label>
                     <br />
-                    <input id='nameInput' name='name' value='".$car['name']."' />
+                    <input id='nameInput' value='".$car['name']."' />
                     <br /><br />
                     <label for='yearInput'>Год выпуска:</label>
                     <br />
-                    <input id='yearInput' name='year' value='".$car['year']."' />
+                    <input id='yearInput' value='".$car['year']."' />
                     <br /><br />
                     <label for='engineInput'>Тип двигателя:</label>
                     <br />
-                    <input id='engineInput' name='engine' value='".$car['engine']."' />
+                    <input id='engineInput' value='".$car['engine']."' />
                     <br /><br />
                     <label for='consumptionInput'>Расход топлива:</label>
                     <br />
-                    <input id='consumptionInput' name='consumption' value='".$car['consumption']."' />
+                    <input id='consumptionInput' value='".$car['consumption']."' />
                     <br /><br />
                     <label for='transmissionInput'>Трансмиссия:</label>
                     <br />
@@ -162,7 +171,7 @@ include("../../scripts/connect.php");
                     <br /><br />
                     <label for='bodyInput'>Тип кузова:</label>
                     <br />
-                    <input id='bodyInput' name='body' value='".$car['body']."' />
+                    <input id='bodyInput' value='".$car['body']."' />
                     <div id='placesContainer'>
                 ";
 
@@ -171,7 +180,7 @@ include("../../scripts/connect.php");
                         <br /><br />
                         <label for='placesInput'>Количество мест:</label>
                         <br />
-                        <input id='placesInput' name='places' value='".$car['places']."' />
+                        <input id='placesInput' value='".$car['places']."' />
                     ";
                 }
 
@@ -184,31 +193,31 @@ include("../../scripts/connect.php");
                     <br /><br />
                     <label for='1_hourInput'>Стоимость за 1 час, руб.:</label>
                     <br />
-                    <input id='1_hourInput' name='1_hour' value='".$car['1_hour']."' />
+                    <input id='1_hourInput' value='".$car['1_hour']."' />
                     <br /><br />
                     <label for='1_dayInput'>Стоимость за 1 сутки, руб.:</label>
                     <br />
-                    <input id='1_dayInput' name='1_day' value='".$car['1_day']."' />
+                    <input id='1_dayInput' value='".$car['1_day']."' />
                     <br /><br />
                     <label for='2_daysInput'>Стоимость за 2 суток, руб.:</label>
                     <br />
-                    <input id='2_daysInput' name='2_days' value='".$car['2_days']."' />
+                    <input id='2_daysInput' value='".$car['2_days']."' />
                     <br /><br />
                     <label for='3_10_daysInput'>Стоимость за 3-10 суток, руб.:</label>
                     <br />
-                    <input id='3_10_daysInput' name='3_10_days' value='".$car['3_10_days']."' />
+                    <input id='3_10_daysInput' value='".$car['3_10_days']."' />
                     <br /><br />
-                    <label for='3_10_daysInput'>Стоимость за 10-20 суток, руб.:</label>
+                    <label for='10_20_daysInput'>Стоимость за 10-20 суток, руб.:</label>
                     <br />
-                    <input id='10_20_daysInput' name='10_20_days' value='".$car['10_20_days']."' />
+                    <input id='10_20_daysInput' value='".$car['10_20_days']."' />
                     <br /><br />
                     <label for='20_30_daysInput'>Стоимость за 20-30 суток, руб.:</label>
                     <br />
-                    <input id='20_30_daysInput' name='20_30_days' value='".$car['20_30_days']."' />
+                    <input id='20_30_daysInput' value='".$car['20_30_days']."' />
                     <br /><br />
                     <label for='min_termInput'>Минимальное время аренды:</label>
                     <br />
-                    <input id='mn_termInput' name='min_term' value='".$car['min_term']."' />
+                    <input id='min_termInput' value='".$car['min_term']."' />
                     <br /><br />
                     <div style='width: 100%;'>
                         <input type='button' id='editSubmit' value='Редактировать' onmouseover='buttonHover(\"editSubmit\", 1)' onmouseout='buttonHover(\"editSubmit\", 0)' onclick='editCar()' class='button relative' />

@@ -19,7 +19,7 @@ if($type == 2) {
         <br /><br />
         <label for='placesInput'>Количество мест:</label>
         <br />
-        <input id='placesInput' name='places' value='".$car['places']."' />
+        <input id='placesInput' value='".$car['places']."' />
     ";
 } else {
     echo "empty";
