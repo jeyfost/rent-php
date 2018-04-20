@@ -93,3 +93,63 @@ function deletePhoto(id) {
         });
     }
 }
+
+function deleteAllPhotos() {
+    if(confirm("Вы действительно хотите удалить все фотографии?")) {
+        $.ajax({
+            type: "POST",
+            url: "/scripts/admin/cars-photos/ajaxDeleteAllPhotos.php",
+            beforeSend: function () {
+                $.notify("Фотографии удаляются...", "info");
+            },
+            success: function (response) {
+                switch (response) {
+                    case "ok":
+                        $.notify("Фотографии были успешно удалены.", "success");
+
+                        $('#additionalPhotosContainer').css("opacity", "0");
+
+                        setTimeout(function () {
+                            $.ajax({
+                                type: "POST",
+                                url: "/scripts/admin/cars-photos/ajaxRebuildPhotosContainer.php",
+                                success: function (html) {
+                                    $('#additionalPhotosContainer').html(html);
+
+                                    setTimeout(function () {
+                                        $('#additionalPhotosContainer').css("opacity", "1");
+                                    }, 300);
+                                }
+                            });
+                        }, 300);
+                        break;
+                    case "failed":
+                        $.notify("Во время удаления фотографий произошла ошибка. Попробуйте снова.", "error");
+                        break;
+                    case "partly":
+                        $.notify("Не все фотографии были удалены.", "error");
+
+                        $('#additionalPhotosContainer').css("opacity", "0");
+
+                        setTimeout(function () {
+                            $.ajax({
+                                type: "POST",
+                                url: "/scripts/admin/cars-photos/ajaxRebuildPhotosContainer.php",
+                                success: function (html) {
+                                    $('#additionalPhotosContainer').html(html);
+
+                                    setTimeout(function () {
+                                        $('#additionalPhotosContainer').css("opacity", "1");
+                                    }, 300);
+                                }
+                            });
+                        }, 300);
+                        break;
+                    default:
+                        $.notify(response, "warn");
+                        break;
+                }
+            }
+        });
+    }
+}
