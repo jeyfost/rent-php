@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: jeyfost
  * Date: 19.04.2018
- * Time: 11:51
+ * Time: 15:29
  */
 
 session_start();
@@ -17,7 +17,7 @@ include("../../scripts/connect.php");
 
     <meta charset="utf-8" />
 
-    <title>Панель администрирования | Добавление автомобилей</title>
+    <title>Панель администрирования | Фотографии автомобилей</title>
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -26,11 +26,13 @@ include("../../scripts/connect.php");
 
     <link rel="stylesheet" type="text/css" href="/css/admin.css" />
     <link rel="stylesheet" href="/libs/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="/libs/lightview/css/lightview/lightview.css" />
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="/libs/notify/notify.js"></script>
+    <script type="text/javascript" src="/libs/lightview/js/lightview/lightview.js"></script>
     <script type="text/javascript" src="/js/admin/common.js"></script>
-    <script type="text/javascript" src="/js/admin/cars/add.js"></script>
+    <script type="text/javascript" src="/js/admin/cars-photos/index.js"></script>
 
     <style>
         #page-preloader {position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: #fff; z-index: 100500;}
@@ -79,12 +81,12 @@ include("../../scripts/connect.php");
         </div>
     </a>
     <a href="/admin/cars/">
-        <div class="menuPointActive">
+        <div class="menuPoint">
             <i class="fa fa-car" aria-hidden="true"></i><span> Автомобили</span>
         </div>
     </a>
     <a href="/admin/cars-photos/">
-        <div class="menuPoint">
+        <div class="menuPointActive">
             <i class="fa fa-camera" aria-hidden="true"></i><span> Фото автомобилей</span>
         </div>
     </a>
@@ -101,79 +103,37 @@ include("../../scripts/connect.php");
 </div>
 
 <div id="content">
-    <span class="headerFont">Добавление автомобилей</span>
+    <span class="headerFont">Редактирование фотографий автомобилей</span>
     <br /><br />
-    <form method="post" id="carsForm">
-        <label for='typeSelect'>Тип автомобиля:</label>
+    <form method="post" id="photosForm" enctype="multipart/form-data">
+        <label for="photosInput">Выберите новые фотографии:<br /><b>(Итоговый размер фотографий на сайте: 960x444)</b></label>
         <br />
-        <select id='typeSelect' onchange='carTypeSelect()'>
-            <?php
-                $carTypeResult = $mysqli->query("SELECT * FROM rent_cars_types");
-                while($carType = $carTypeResult->fetch_assoc()) {
-                    echo "<option value='".$carType['id']."'"; if($carType['id'] == 1) {echo " selected";} echo ">".$carType['name']."</option>";
-                }
-            ?>
-        </select>
+        <input type="file" class="file" multiple="multiple" id="photosInput" name="photos[]" />
         <br /><br />
-        <label for='nameInput'>Название автомобиля:</label>
-        <br />
-        <input id='nameInput' />
-        <br /><br />
-        <label for='yearInput'>Год выпуска:</label>
-        <br />
-        <input id='yearInput' />
-        <br /><br />
-        <label for='engineInput'>Тип двигателя:</label>
-        <br />
-        <input id='engineInput' />
-        <br /><br />
-        <label for='consumptionInput'>Расход топлива:</label>
-        <br />
-        <input id='consumptionInput' />
-        <br /><br />
-        <label for='transmissionInput'>Трансмиссия:</label>
-        <br />
-        <input id='transmissionInput' name='transmission' />
-        <br /><br />
-        <label for='bodyInput'>Тип кузова:</label>
-        <br />
-        <input id='bodyInput' name='body' />
-        <div id='placesContainer'></div>
-        <br /><br />
-        <label for='descriptionInput'>Дополнительное описание (не обязательно):</label>
-        <br />
-        <textarea id='descriptionInput' name='description' onkeydown='textAreaHeight(this)'></textarea>
-        <br /><br />
-        <label for='1_hourInput'>Стоимость за 1 час, руб.:</label>
-        <br />
-        <input id='1_hourInput' />
-        <br /><br />
-        <label for='1_dayInput'>Стоимость за 1 сутки, руб.:</label>
-        <br />
-        <input id='1_dayInput' />
-        <br /><br />
-        <label for='2_daysInput'>Стоимость за 2 суток, руб.:</label>
-        <br />
-        <input id='2_daysInput' />
-        <br /><br />
-        <label for='3_10_daysInput'>Стоимость за 3-10 суток, руб.:</label>
-        <br />
-        <input id='3_10_daysInput' />
-        <br /><br />
-        <label for='10_20_daysInput'>Стоимость за 10-20 суток, руб.:</label>
-        <br />
-        <input id='10_20_daysInput' />
-        <br /><br />
-        <label for='20_30_daysInput'>Стоимость за 20-30 суток, руб.:</label>
-        <br />
-        <input id='20_30_daysInput' />
-        <br /><br />
-        <label for='min_termInput'>Минимальное время аренды:</label>
-        <br />
-        <input id='min_termInput' />
-        <br /><br />
-        <input type='button' id='addSubmit' value='Добавить' onmouseover='buttonHover("addSubmit", 1)' onmouseout='buttonHover("addSubmit", 0)' onclick='addCar()' class='button' />
-
+        <input type='button' id='addSubmit' value='Добавить фотографии' onmouseover='buttonHover("addSubmit", 1)' onmouseout='buttonHover("addSubmit", 0)' onclick='addPhotos()' class='button' />
+    </form>
+    <br /><hr /><br />
+    <span>Фотографии:</span>
+    <br /><br />
+    <div id="additionalPhotosContainer">
+        <?php
+            $photoResult = $mysqli->query("SELECT * FROM rent_cars_photos");
+            while($photo = $photoResult->fetch_assoc()) {
+                echo "
+                    <div class='photoPreview'>
+                        <a href='/images/cars/".$photo['big']."' class='lightview' data-lightview-group='cars-photos' data-lightview-options='skin: \"light\"'>
+                            <img src='/images/cars/".$photo['big']."' style='width: 100px;' />
+                        </a>
+                        <br />
+                        <span onclick='deletePhoto(\"".$photo['id']."\")'>Удалить</span>
+                    </div>
+                ";
+            }
+        ?>
+    </div>
+    <br />
+    <form method="post" name="deleteForm">
+        <input type='button' id='deleteSubmit' value='Удалить все фотографии' onmouseover='buttonHoverRed("deleteSubmit", 1)' onmouseout='buttonHoverRed("deleteSubmit", 0)' onclick='deleteAllPhotos()' class='button' />
     </form>
 </div>
 
