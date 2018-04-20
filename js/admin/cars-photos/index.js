@@ -48,3 +48,48 @@ function addPhotos() {
         }
     });
 }
+
+function deletePhoto(id) {
+    if(confirm("Вы действительно хотите удалить эту фотографию?")) {
+        $.ajax({
+            type: "POST",
+            data: {"id": id},
+            url: "/scripts/admin/cars-photos/ajaxDeletePhoto.php",
+            beforeSend: function () {
+                $.notify("Фотография удаляется...", "info");
+            },
+            success: function (response) {
+                switch (response) {
+                    case "ok":
+                        $.notify("Фотография была успешно удалена.", "success");
+
+                        $('#additionalPhotosContainer').css("opacity", "0");
+
+                        setTimeout(function () {
+                            $.ajax({
+                                type: "POST",
+                                url: "/scripts/admin/cars-photos/ajaxRebuildPhotosContainer.php",
+                                success: function (html) {
+                                    $('#additionalPhotosContainer').html(html);
+
+                                    setTimeout(function () {
+                                        $('#additionalPhotosContainer').css("opacity", "1");
+                                    }, 300);
+                                }
+                            });
+                        }, 300);
+                        break;
+                    case "failed":
+                        $.notify("Во время удаления фотографии произошла ошибка. Попробуйте снова.", "error");
+                        break;
+                    case "id":
+                        $.notify("Неверный идентификатор фотографии.", "error");
+                        break;
+                    default:
+                        $.notify(response, "warn");
+                        break;
+                }
+            }
+        });
+    }
+}
